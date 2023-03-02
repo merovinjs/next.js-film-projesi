@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       Made with ❤️ by&nbsp;
-      <Link href="https://twitter.com/_mehmetpekcan" target="_blank">
+      <Link href="https://github.com/Proprogam" target="_blank">
         OLD BEE
       </Link>
     </footer>
