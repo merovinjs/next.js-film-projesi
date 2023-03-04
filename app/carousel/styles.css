@@ -1,12 +1,11 @@
-.categories {
+.swiper {
   display: flex;
   align-items: center;
   height: 72px;
-  gap: 24px;
-  padding-top: 15rem;
+  gap: 4px;
 }
 
-.category {
+.swiper-slide {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,4 +16,8 @@
   height: 100%;
   border-radius: 6px;
   font-weight: 700;
+}
+.swiper-slide :hover {
+  z-index: 9;
+  transform: scale(1.05);
 }

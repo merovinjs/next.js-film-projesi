@@ -3,6 +3,8 @@ import React from "react";
 import { FeaturedMovie } from "@/components/featured-movie";
 import Categories from "@/components/categories";
 import { MoviesSection } from "@/components/movies-section";
+import Carousel from "@/app/carousel/page";
+
 const HomeContainer = ({
   topRatedMovies = [],
   popularMovies = [],
@@ -11,8 +13,13 @@ const HomeContainer = ({
 }) => {
   return (
     <div>
-      <FeaturedMovie movie={topRatedMovies?.[0]} />
-      <Categories categories={categories.slice(0, 5)} />
+      <FeaturedMovie
+        movie={
+          topRatedMovies?.[Math.floor(Math.random() * topRatedMovies.length)]
+        }
+      />
+      <Carousel categories={categories} />
+      {/* <Categories categories={categories.slice(1, 7)} /> */}
       {selectedCategory.movies.length > 0 && (
         <MoviesSection
           title={
@@ -23,8 +30,8 @@ const HomeContainer = ({
         />
       )}
 
-      <MoviesSection title="populer film" movies={topRatedMovies.slice(1, 7)} />
-      <MoviesSection title="Action" movies={popularMovies.slice(7, 13)} />
+      <MoviesSection title="populer film" movies={topRatedMovies} />
+      <MoviesSection title="Action" movies={popularMovies} />
     </div>
   );
 };
