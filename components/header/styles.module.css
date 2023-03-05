@@ -11,7 +11,7 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.1rem;
   font-size: 24px;
   font-weight: 700;
   letter-spacing: -1px;
@@ -20,8 +20,33 @@
 
 .navigationMenu {
   display: flex;
-  gap: 48px;
+  gap: 0.5rem;
   color: #fafafa;
   font-weight: 700;
   letter-spacing: 2px;
+}
+.input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  flex: 1;
+  color: #fafafa;
+  font-size: larger;
+}
+.input::placeholder {
+  font-weight: bold;
+  opacity: 0.8;
+  color: rgb(253, 253, 253);
+}
+
+.baseInput {
+  position: relative;
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 2px solid rgb(0, 24, 0);
+  height: 2rem;
+  padding: 0.3rem;
+  max-width: 340px;
 }
