@@ -17,20 +17,22 @@ export default function Carousel({ categories }) {
   return (
     <>
       <Swiper
-        spaceBetween={5}
-        slidesPerView={4.5}
+        spaceBetween={19}
+        slidesPerView={4}
         navigation={true}
         pagination={false}
         modules={[Navigation, Pagination]}
         className="mySwiper"
       >
-        {categories.map((category) => (
-          <SwiperSlide>
-            <a href={`/${category.id}`}>
-              <div>{category.name}</div>
-            </a>
-          </SwiperSlide>
-        ))}
+        <div className="container">
+          {categories.map((category) => (
+            <SwiperSlide>
+              <a href={`/${category.id}`}>
+                <div>{category.name}</div>
+              </a>
+            </SwiperSlide>
+          ))}
+        </div>
       </Swiper>
     </>
   );

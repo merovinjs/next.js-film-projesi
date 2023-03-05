@@ -1,10 +1,8 @@
-.swiper {
+.mySwiper {
   display: flex;
   align-items: center;
   height: 72px;
-  gap: 4px;
 }
-
 .swiper-slide {
   display: flex;
   align-items: center;
@@ -17,7 +15,31 @@
   border-radius: 6px;
   font-weight: 700;
 }
+
 .swiper-slide :hover {
-  z-index: 9;
   transform: scale(1.05);
+}
+
+.swiper-button-prev {
+  color: #a80000;
+}
+
+.swiper-button-next {
+  color: #a80000;
+}
+.swiper-button-next:hover {
+  background-color: black;
+  color: #a80000;
+
+  text-shadow: 0 0 5px #a80000;
+  transition: all 0.2s linear;
+  transform: scale(1.6);
+}
+.swiper-button-prev:hover {
+  background-color: black;
+  color: #a80000;
+
+  text-shadow: 0 0 5px #a80000;
+  transition: all 0.2s linear;
+  transform: scale(1.6);
 }
