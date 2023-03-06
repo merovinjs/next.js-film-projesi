@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.css";
 import Link from "next/link";
 import Image from "next/image";
-const Page = async ({ params, title, movies }) => {
+const Page = async ({ params, title }) => {
   const keyword = params.keyword;
   const res = await fetch(
     `https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&query=${keyword}&language=en-US&page=1&include_adult=false`

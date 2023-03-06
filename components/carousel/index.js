@@ -12,6 +12,7 @@ import "./styles.css";
 
 // import required modules
 import { Navigation, Pagination } from "swiper";
+import Link from "next/link";
 
 export default function Carousel({ categories }) {
   return (
@@ -27,9 +28,9 @@ export default function Carousel({ categories }) {
         <div className="container">
           {categories.map((category) => (
             <SwiperSlide>
-              <a href={`/${category.id}`}>
+              <Link href={`/${category.id}`}>
                 <div>{category.name}</div>
-              </a>
+              </Link>
             </SwiperSlide>
           ))}
         </div>
