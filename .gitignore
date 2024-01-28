@@ -33,6 +33,9 @@ yarn-error.log*
 =======
 
 
+<<<<<<< HEAD
+>>>>>>> dev
+=======
 >>>>>>> dev
 # vercel
 .vercel
