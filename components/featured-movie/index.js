@@ -24,7 +24,7 @@ function FeaturedMovie({ movie = {}, isCompact = true, movieVideoHD }) {
         <div className={styles.moviePosterOverlay}></div>
         <Image unoptimized src={`https://image.tmdb.org/t/p/original${poster_path}`} alt={title} fill />
       </div>
-      <YouTubeEmbed videoid={movieVideoHD?.key || "RFVUgGnp7xE"} height={400} params="controls=0" />
+      <div>{movieVideoHD?.key ? <YouTubeEmbed videoid={movieVideoHD?.key} height={400} params="controls=0" /> : ""}</div>
     </div>
   );
 }
