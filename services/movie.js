@@ -1,9 +1,7 @@
 const fetchMovieApi = async (pathname, qeury = "") => {
   const API_URL = "https://api.themoviedb.org/3";
   try {
-    const res = await fetch(
-      `${API_URL}${pathname}?api_key=${process.env.API_KEY}&${qeury}`
-    );
+    const res = await fetch(`${API_URL}${pathname}?api_key=${process.env.API_KEY}&${qeury}`);
     return res.json();
   } catch (error) {
     throw new Error(error);
@@ -28,10 +26,8 @@ const getMovie = async (movieId) => {
   return fetchMovieApi(`/movie/${movieId}`);
 };
 
-export {
-  getMovie,
-  getSingleCategory,
-  getCategories,
-  getTopRatedMovies,
-  getPopularMovies,
+const getMovieVideo = async (movieId) => {
+  return fetchMovieApi(`/movie/${movieId}/videos`);
 };
+
+export { getMovie, getSingleCategory, getCategories, getTopRatedMovies, getPopularMovies, getMovieVideo };
